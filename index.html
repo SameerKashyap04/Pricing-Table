@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        background-color: whitesmoke;
+      }
+      .pricing-container{
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3%;
+        height: 100vh;
+      }
+      .pricing-container > *{
+        background-color: white;
+        border-radius: 3%;
+        
+      }
+      .plan-title ,.plan-title2,.plan-title3{
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+        color: white;
+        padding: 10px;
+      }
+      .plan-title3,.plan-button3{
+        background-image: linear-gradient( 135deg, #65FDF0 10%, #1D6FA3 100%);
+      }
+      .plan-title2,.plan-button2{
+        background-image: linear-gradient( 135deg, #FFF720 10%, #3CD500 100%);
+      }
+      .plan-title,.plan-button{
+        background-image: linear-gradient( 135deg, #F6D242 10%, #FF52E5 100%);
+      }
+      .plan-price{
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 10px;
+      }
+      .pricing-plan {
+      flex: 1;
+      max-width: 400px;
+    }
+      .pricing-container ul{
+        font-size: .8rem;
+        list-style: none;
+        padding: 20px;
+        margin-left: 8rem;
+      }
+      .pricing-container span{
+        font-size: 0.5rem;
+      }
+      .plan-button ,.plan-button2,.plan-button3{
+        margin-left: 37%;
+        margin-bottom: 1.5rem;
+        border: none;
+        width: 4rem;
+        border-radius: .5rem;
+        color: white;
+        
+      }
+      .pricing-container .price-simble{
+        font-size: 20px;
+        font-weight: 600;
+        padding: 3px;
+      }
+      hr{
+        width: 50%;
+        padding: 0;
+      }
+      footer{
+        text-align: right;
+        padding-top: 5rem;
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 1250px) {
+        .pricing-container {
+        flex-direction: column;
+        height: 100%;
+      }
+      .pricing-container ul{
+        min-width: 160px;
+        margin-left: 0;
+      }
+      .plan-button ,.plan-button2,.plan-button3{
+        margin-left: 33%;
+        margin-bottom: 1.5rem;
+      }
+      } 
+    </style>
+  </head>
+
+  <body>
+    <div class="pricing-container">
+      <div class="pricing-plan">
+        <div class="plan-title">Basic</div>
+        <div class="plan-price"><span class="price-simble">$</span>9.99<span>/mo</span></div>
+        <hr/>
+        <ul class="plan-features">
+          <li>✅ 10GB Storage</li>
+          <li>✅ 1 User</li>
+          <li>🚫 Support</li>
+        </ul>
+        <button class="plan-button"><a href="https://groww.in/charts/indices/sp-bse-sensex?exchange=BSE">Sign Up</a></button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title2">Standard</div>
+        <div class="plan-price"><span class="price-simble">$</span>19.99<span>/mo</span></div>
+        <hr/>
+        <ul class="plan-features">
+          <li>✅ 50GB Storage</li>
+          <li>✅ 5 Users</li>
+          <li>✅ Phone &amp; Email Support</li>
+        </ul>
+        <button class="plan-button2">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title3">Premium</div>
+        <div class="plan-price"><span class="price-simble">$</span>49.99<span>/mo</span></div>
+        <hr/>
+        <ul class="plan-features">
+          <li>✅ 100GB Storage</li>
+          <li>✅ 10 Users</li>
+          <li>✅ 24/7 Support</li>
+        </ul>
+        <button class="plan-button3">Sign Up</button>
+      </div>
+    </div>
+    <footer>©2024 Sameer Kashyap</footer>
+  </body>
+</html>
